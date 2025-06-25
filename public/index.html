@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Authentication System</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Authentication System</h1>
+    <form action="/login" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="toggleForm()">Register</a></p>
+  </div>
+  <div class="container" id="registerForm" style="display: none;">
+    <h1>Register</h1>
+    <form action="/register" method="post">
+      <label for="regUsername">Username:</label>
+      <input type="text" id="regUsername" name="username" required>
+      <label for="regPassword">Password:</label>
+      <input type="password" id="regPassword" name="password" required>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
